@@ -1,0 +1,15 @@
+SQL - Часть 1. 
+Общая информация
+
+Смотрите в файле, приложенному к анонсу.
+
+Особенности тестирования
+
+Все SQL-запросы тестируются при помощи sqlite3.
+В этой базе данных отличается работа с датами.
+Для того, чтобы получить:
+1. Год из timestamp нужно сделать: cast(strftime('%Y', some_timestamp_field) as integer)
+2. Месяц (1 - январь, 2 - февраль и т.д.) из timestamp нужно сделать: cast(strftime('%m', some_timestamp_field) as integer)
+3. День из timestamp нужно сделать: cast(strftime('%d', some_timestamp_field) as integer)
+4. День недели (0 - воскресенье, 1 - понедельник и т.д.) из timestamp: cast(strftime('%w', some_timestamp_field) as integer)
+
